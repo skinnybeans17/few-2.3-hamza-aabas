@@ -36,6 +36,7 @@ function StarWars() {
                     setHomeworld(hwData);
                 } catch (error) {
                     console.error(error)
+                    return <h6>Sorry, invalid data.</h6>
                 }
 
                 const filmPromises = char.filmsList.map((url) => fetch(url).then((response) => response.json()));
@@ -74,7 +75,7 @@ function StarWars() {
             <h2>Saved Characters</h2>
             <ul>
                 {charList.map((char) => (
-                    <li key={char.url}>{char.name}</li>
+                    <li key={char.url}>{char.name}, {char.mass}, {char.height}, {char.birth_year}, {char.gender}</li>
                 ))}
             </ul>
         </div>
