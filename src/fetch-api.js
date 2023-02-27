@@ -1,5 +1,5 @@
 export function fetchAPI(id) {
-    return fetch('https://swapi.dev/api/people/{id}/').then((response) => response.json());
+    return fetch(`https://swapi.dev/api/people/${id}/`).then((response) => response.json());
 }
 
 export function fetchHW(url) {

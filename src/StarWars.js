@@ -47,6 +47,7 @@ function StarWars() {
 
     return (
         <div>
+            <label>Enter a number from 1 to 16, or 18 to 83.</label>
             <form onSubmit={handleSubmit}>
                 <input type="text" value={value} onChange={handleChange} placeholder="Enter an ID Number" />
                 <button type="submit">Search</button>
@@ -60,7 +61,7 @@ function StarWars() {
                         <li>Birth: {char.birth_year}</li>
                         <li>Gender: {char.gender}</li>
                     </ul>
-                    <h3>Films</h3>
+                    <h2>Films</h2>
                     <ul>
                         {filmsList.map((film) => (
                             <li key={film.url}>{film.title}</li>
