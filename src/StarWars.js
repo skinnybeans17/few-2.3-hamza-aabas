@@ -48,11 +48,23 @@ function StarWars() {
 
     return (
         <div>
-            <label>Enter a number from 1 to 16, or 18 to 83.</label>
-            <form onSubmit={handleSubmit}>
-                <input type="text" value={value} onChange={handleChange} placeholder="Enter an ID Number" />
-                <button type="submit">Search</button>
-            </form>
+            <div className="search">
+                <div className="top">
+                    <label>Enter a number from 1 to 16, or 18 to 83.</label>
+                    <form onSubmit={handleSubmit}>
+                        <input type="text" value={value} onChange={handleChange} placeholder="Enter an ID Number" />
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+                <div className="top">
+                    <h2 className="characters">Saved Characters</h2>
+                    <ul className="characters">
+                        {charList.map((char) => (
+                            <li key={char.url}>{char.name}, {char.mass}, {char.height}, {char.birth_year}, {char.gender}</li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
             {char && (
                 <div>
                     <h1>{char.name}</h1>
@@ -72,12 +84,6 @@ function StarWars() {
                     <button onClick={handleSave}>Save</button>
                 </div>
             )}
-            <h2>Saved Characters</h2>
-            <ul>
-                {charList.map((char) => (
-                    <li key={char.url}>{char.name}, {char.mass}, {char.height}, {char.birth_year}, {char.gender}</li>
-                ))}
-            </ul>
         </div>
     );
 }

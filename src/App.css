@@ -6,6 +6,7 @@
   background-color: bisque;
   height: 1000px;
   width: 100%;
+  justify-content: center;
 }
 
 button {
@@ -68,4 +69,58 @@ li > button {
   border-radius: 8px;
   font-size: 15px;
   align-items: center;
+}
+
+.characters {
+  width: 50%;
+  position: relative;
+  left: 40%;
+  align-items: center;
+}
+
+.characters > li {
+  list-style-type: none;
+  border: 1px orange solid;
+  background-color: yellow;
+  color: orangered;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  margin-left: 15px;
+  border-radius: 8px;
+  transition: 400ms;
+}
+
+.characters > h2 {
+  position: relative;
+  align-items: center;
+  left: 25%;
+}
+
+form {
+  font-size: 50px;
+  height: 20%;
+  width: 50%;
+}
+
+label {
+  width: 50%;
+  position: relative;
+  right: 25%;
+}
+
+.search {
+  padding: 20px;
+  position: relative;
+}
+
+.list:first-child {
+  width: 50%;
+  float: left;
+  padding: 20px;
+}
+
+.list:second-child {
+  width: 50%;
+  float: right;
+  padding: 20px;
 }
